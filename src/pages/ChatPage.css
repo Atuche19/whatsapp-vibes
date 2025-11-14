@@ -57,10 +57,10 @@
 .chat-messages-area {
   flex: 1;
   overflow-y: auto;
-  padding: 0.75rem 0.5rem;
+  padding: 0.75rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.75rem;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   overscroll-behavior: contain;
@@ -93,22 +93,24 @@
 .chat-bubble.user {
   background: linear-gradient(135deg, #C08AF8 0%, #A872F0 100%);
   color: white;
-  border-radius: 18px;
+  border-radius: 18px 18px 4px 18px;
   padding: 0.65rem 0.85rem;
-  max-width: 80%;
+  max-width: 85%;
   box-shadow: 0 6px 20px rgba(162, 121, 228, 0.25);
   backdrop-filter: blur(8px);
   font-weight: 400;
+  margin-left: auto;
 }
 
 /* GRACE BUBBLE — elegant neutral tone */
 .chat-bubble.grace {
   background: #F4F0FA;
   color: #2A2A2A;
-  border-radius: 18px;
+  border-radius: 18px 18px 18px 4px;
   padding: 0.65rem 0.85rem;
-  max-width: 80%;
+  max-width: 85%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-right: auto;
 }
 
 /* Chat input wrapper - at bottom of screen */
@@ -605,13 +607,25 @@
   }
 
   .bubble-wrapper {
-    padding: 0 0.125rem;
+    padding: 0;
+  }
+
+  .bubble-wrapper.user {
+    padding-right: 0.5rem;
+  }
+
+  .bubble-wrapper.grace {
+    padding-left: 0.5rem;
   }
 
   .chat-bubble {
-    max-width: 90%;
+    max-width: 85%;
     font-size: 0.9rem;
     padding: 0.625rem 0.875rem;
+  }
+
+  .chat-bubble.user {
+    margin-left: auto;
   }
 
   .modal-card {
