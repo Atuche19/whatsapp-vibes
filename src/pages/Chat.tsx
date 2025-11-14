@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Paperclip, Mic, MicOff } from 'lucide-react';
-import { apiFetch } from '@/utils/api';
+import { apiFetch } from '../utils/api';
 
 interface Message {
   id: string;
